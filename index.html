@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/button.css">
+    <link rel="stylesheet" href="./src/css/records.css">
+    <link rel="stylesheet" href="./src/css/modal.css">
+    <script src="./src/js/main.js" defer></script>
+    <title>CRUD</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Inventário online</h1>
+    </header>
+    <main>
+        <div class="buttonCadastro">
+            <div>
+                <button type="button" class="button blue mobile" id="cadastrarCliente">Adicionar Item <span>&plus;</span></button>
+            </div>
+        </div>
+        <table id="tbInventario" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Quantidade</th>
+                    <th>Valor (R$)</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Item</h2>
+                    <span class="modal-close" id="modalClose">X</span>
+                </header>
+                <form id="form-save" class="modal-form">
+                    <input type="text" class="modal-field" id="nome" data-index="new" placeholder="Nome do Item"
+                        required>
+                    <input type="text" class="modal-field" id="categoria" placeholder="Categoria do Item" required>
+                    <input type="number" class="modal-field" id="quantidade" placeholder="Quantidade do Item" required>
+                    <input type="number" class="modal-field" id="valor" placeholder="Valor do Item" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Nilson Rodrigues
+    </footer>
+</body>
+
+</html>
